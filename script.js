@@ -43,22 +43,15 @@ menuMobile();
 // ########### SCROLL SUAVE #########
 
 function scrollSuave() {
-  const body = document.body;
-  const nav = document.getElementById("nav");
-  const linksInterno = document.querySelectorAll("#menu a.interno");
+  const linksInterno = document.querySelectorAll(".interno");
 
   function scrolar(i) {
-    i.preventDefault();
     const href = i.currentTarget.getAttribute("href");
     const section = document.querySelector(href);
-    const scrollMarginTop = 80;
-    section.style.scrollMarginTop = `${scrollMarginTop}px`;
     section.scrollIntoView({
       behavior: "smooth",
       block: "start",
     });
-    body.classList.remove("menu-active");
-    nav.classList.remove("active");
   }
 
   linksInterno.forEach((item) => {
@@ -86,4 +79,13 @@ menuItems.forEach(function (item) {
       document.body.classList.remove("menu-active");
     }, 2000);
   });
+});
+
+// ####### IMAGE COMPARATOR #######
+
+const container = document.querySelector(".container-foto");
+const slider = document.querySelector(".slider");
+
+slider.addEventListener("input", (e) => {
+  container.style.setProperty("--position", `${e.target.value}%`);
 });

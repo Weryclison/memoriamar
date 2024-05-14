@@ -21,10 +21,21 @@
   display: inline-block;
   box-sizing: border-box;
 }
+.linha {
+  height: 2px;
+  width: 100%;
+  background-color: var(--cinza-2);
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
 @media (max-width: 750px) {
   .container {
     padding-left: 20px;
     padding-right: 20px;
+  }
+  .linha {
+    margin-top: 60px;
+    margin-bottom: 60px;
   }
 }
 @media (max-width: 281px) {

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memoriamar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header id="header">
+    <div class="container flex-menu">
+      <a id="logo" href="index.html"><img src="./svg/logo.svg" alt="logo-memoriamar"></a>
+      <nav id="nav">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+          <span id="hamburguer"></span>
+        </button>
+        <ul id="menu">
+          <li class="font-1-d cinza-1"><a href="index.html" data-text="Home">home</a></li>
+          <li class="font-1-d cinza-1"><a href="serviços.html" data-text="serviços">serviços</a></li>
+          <li class="font-1-d cinza-1"><a href="#" data-text="sobre">sobre</a></li>
+          <li class="font-1-d cinza-1"><a href="#" data-text="portfólio">portfólio</a></li>
+          <li class="font-1-d cinza-1"><a href="#" data-text="contato">contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="inicio-servicos">
+    <div class="content" id="text">
+      <h2>memoriamar</h2>
+      <h2>memoriamar</h2>
+    </div>
+    <a href="#" class="botao">
+      <span>pedir orçamento</span>
+      <div class="liquid"></div>
+    </a>
+    <a href="#fotografia" class="setinha-baixo interno">
+      <img src="./svg/seta-indicando-baixo.svg" alt="">
+    </a>
+  </section>
+  <section class="fotografia container" id="fotografia">
+    <div class="linha"></div>
+    <h2 class="font-1-d cinza-1">guarde seu melhores momentos</h2>
+    <h3 class="font-1-b branco">FOTOGRAFIA</h3>
+    <p class="font-1-c cinza">Com nossas lentes, capturamos emoções e transformamos momentos. Além de fotografar, também refinamos cada imagem, garantindo memórias que perduram para sempre. Confira esse antes e depois:</p>
+    <main>
+      <div class="container-foto">
+        <div class="image-container">
+          <img class="image-before slider-image" src="./img/foto-antes.webp" alt="color photo" />
+          <img class="image-after slider-image" src="./img/foto-depois.webp" alt="black and white" />
+        </div>
+        <input type="range" min="0" max="100" value="50" aria-label="Percentage of before photo shown" class="slider" />
+        <div class="slider-line" aria-hidden="true"></div>
+        <div class="slider-button" aria-hidden="true">
+          <img src="./svg/controlador-de-direção.svg" alt="">
+        </div>
+      </div>
+    </main>
+    <div class="linha"></div>
+  </section>
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>
