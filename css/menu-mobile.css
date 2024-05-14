@@ -30,7 +30,6 @@
   display: none;
 }
 .menu-active {
-  overflow: hidden;
   background-color: transparent;
 }
 
@@ -42,7 +41,7 @@
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0);
-  z-index: 999;
+  /* z-index: 999; */
   transition: background-color 1s ease;
 }
 
