@@ -1,0 +1,49 @@
+.background-index {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #4f4f51;
+}
+.background-index video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
+.index-footer {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 40px;
+  align-items: center;
+}
+.redes {
+  display: flex;
+  gap: 28px;
+}
+.background-index .redes {
+  float: left;
+}
+.background-index .credito {
+  float: right;
+}
+.background-index .botao {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -10px;
+}
+@media (max-width: 800px) {
+  .background-index .redes {
+    display: none;
+  }
+  .background-index .credito {
+    display: none;
+  }
+}

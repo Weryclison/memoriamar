@@ -1,0 +1,9 @@
+@import url(./css/global.css);
+@import url(./css/tipografiaecor.css);
+@import url(./css/menu-mobile.css);
+@import url(./css/reutilizaveis.css);
+
+/* index */
+
+@import url(./css/index/inicio.css);
+@import url(./css/efeitos-css/button-liquid.css);

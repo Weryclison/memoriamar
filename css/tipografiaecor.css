@@ -1,0 +1,72 @@
+.font-1-a {
+  font-family: "Montserrat";
+  font-weight: 900;
+  font-size: 8rem;
+  line-height: 1.1;
+  letter-spacing: 0.15rem;
+}
+
+.font-1-b {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 2.25rem;
+  line-height: 1.5;
+  letter-spacing: 0.0675rem;
+}
+
+.font-1-c {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.font-1-d {
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: 0.1rem;
+  font-variant: small-caps;
+}
+
+.font-1-e {
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 0.75rem;
+  line-height: 1.2;
+  letter-spacing: 0.075rem;
+  font-variant: small-caps;
+}
+
+@media (max-width: 900px) {
+  .font-1-a {
+    font-size: 3rem;
+  }
+}
+:root {
+  --branco: #ffffff;
+  --cinza: #c4c4c4;
+  --cinza-1: #7e7e7e;
+  --claro: #f2eadf;
+  --cinza-2: #232323;
+  --preto: #000000;
+}
+.branco {
+  color: var(--branco);
+}
+.cinza {
+  color: var(--cinza);
+}
+.cinza-1 {
+  color: var(--cinza-1);
+}
+.claro {
+  color: var(--claro);
+}
+.cinza-2 {
+  color: var(--cinza-2);
+}
+.preto {
+  color: var(--preto);
+}
