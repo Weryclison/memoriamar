@@ -7,3 +7,14 @@
 .fotografia p {
   margin-bottom: 60px;
 }
+@media (max-width: 750px) {
+  .fotografia p {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 280px) {
+  .fotografia h3 {
+    margin-top: 8px;
+    font-size: 1.25rem;
+  }
+}

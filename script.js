@@ -43,9 +43,10 @@ menuMobile();
 // ########### SCROLL SUAVE #########
 
 function scrollSuave() {
-  const linksInterno = document.querySelectorAll(".interno");
+  const linksInterno = document.querySelectorAll("a.interno");
 
   function scrolar(i) {
+    i.preventDefault();
     const href = i.currentTarget.getAttribute("href");
     const section = document.querySelector(href);
     section.scrollIntoView({
@@ -77,7 +78,7 @@ menuItems.forEach(function (item) {
     document.body.classList.remove("active");
     timeoutId = setTimeout(function () {
       document.body.classList.remove("menu-active");
-    }, 2000);
+    }, 500);
   });
 });
 
@@ -89,3 +90,15 @@ const slider = document.querySelector(".slider");
 slider.addEventListener("input", (e) => {
   container.style.setProperty("--position", `${e.target.value}%`);
 });
+
+// ##### VIDEO PLAY HOVER #######
+
+const clip = document.querySelectorAll(".clip");
+for (let i = 0; i < clip.length; i++) {
+  clip[i].addEventListener("mouseenter", function (e) {
+    clip[i].play();
+  });
+  clip[i].addEventListener("mouseout", function (e) {
+    clip[i].pause();
+  });
+}

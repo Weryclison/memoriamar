@@ -12,15 +12,15 @@
 }
 #menu {
   display: flex;
-  gap: 60px;
+  gap: 50px;
   align-items: center;
-}
-#menu li {
-  padding: 10px !important;
 }
 #menu a {
   display: block;
   transition: color 0.2s;
+  padding-top: 20px !important;
+  padding-bottom: 20px !important;
+  cursor: pointer;
 }
 #menu li:hover {
   color: var(--branco);
@@ -41,8 +41,8 @@
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0);
-  /* z-index: 999; */
-  transition: background-color 1s ease;
+  z-index: 999;
+  transition: background-color 0.5s ease;
 }
 
 .menu-active.active::before {

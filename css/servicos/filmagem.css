@@ -1,0 +1,20 @@
+.filmagem {
+  text-align: center;
+}
+.filmagem h3 {
+  margin-bottom: 16px;
+}
+.filmagem p {
+  margin-bottom: 60px;
+}
+@media (max-width: 750px) {
+  .filmagem p {
+    margin-bottom: 40px;
+  }
+}
+@media (max-width: 280px) {
+  .filmagem h3 {
+    margin-top: 8px;
+    font-size: 1.25rem;
+  }
+}

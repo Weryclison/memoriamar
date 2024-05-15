@@ -2,11 +2,13 @@
 @import url(./css/tipografiaecor.css);
 @import url(./css/menu-mobile.css);
 @import url(./css/reutilizaveis.css);
+@import url(./css/footer.css);
 
 /*EFEITOS CSS*/
 @import url(./css/efeitos-css/button-liquid.css);
 @import url(./css/efeitos-css/text-liquid.css);
 @import url(./css/efeitos-css/image-comparator.css);
+@import url(./css/efeitos-css/video-hover.css);
 /* index */
 
 @import url(./css/index/inicio.css);
@@ -15,3 +17,5 @@
 
 @import url(./css/servicos/inicio.css);
 @import url(./css/servicos/fotografia.css);
+@import url(./css/servicos/filmagem.css);
+@import url(./css/servicos/footer-servico.css);

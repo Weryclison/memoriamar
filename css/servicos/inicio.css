@@ -4,6 +4,12 @@
   background-image: url(../../img/foto-fundo-serviços.webp);
   background-size: cover;
 }
+.inicio-servicos .content h2 {
+  margin-top: 200px;
+  margin-bottom: 40px;
+  font-size: 5rem;
+}
+
 .inicio-servicos .botao {
   margin-top: 320px;
   margin-bottom: 120px;
@@ -25,7 +31,7 @@
 }
 @media (max-width: 750px) {
   .inicio-servicos .botao {
-    margin-top: 240px;
+    margin-top: 230px;
     margin-bottom: 120px;
   }
   .setinha-baixo {
@@ -34,4 +40,25 @@
     margin-top: 320px;
     animation: moveUpDown 2s ease-in-out infinite alternate;
   }
+  .inicio-servicos .content h2 {
+    font-size: 4rem;
+    margin-top: 140px;
+  }
 }
+@media (max-width: 450px) {
+  .inicio-servicos .content h2 {
+    font-size: 13vw;
+  }
+  .inicio-servicos .botao {
+    margin-top: 210px;
+    margin-bottom: 120px;
+  }
+  .setinha-baixo {
+    margin-top: 280px;
+  }
+}
+/* @media (max-width: 280px) {
+  .inicio-servicos .content h2 {
+    font-size: 1.5rem;
+  }
+} */

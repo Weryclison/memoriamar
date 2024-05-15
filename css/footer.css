@@ -1,0 +1,33 @@
+footer .linha {
+  margin-bottom: 20px;
+}
+.rodape {
+  padding-top: 200px;
+}
+.subir {
+  display: flex;
+  gap: 32px;
+  float: left;
+}
+.rodape .redes {
+  float: right;
+}
+.rodape > p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+@media (max-width: 750px) {
+  .subir {
+    display: none;
+  }
+  .rodape .redes {
+    float: none;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .rodape {
+    padding-top: 100px;
+    text-align: center;
+  }
+}

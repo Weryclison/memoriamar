@@ -2,8 +2,7 @@
   font-family: "Montserrat";
   font-weight: 900;
   font-size: 8rem;
-  line-height: 1.1;
-  letter-spacing: 0.15rem;
+  letter-spacing: 0.3rem;
 }
 
 .font-1-b {
@@ -39,9 +38,14 @@
   font-variant: small-caps;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 600px) {
   .font-1-a {
-    font-size: 3rem;
+    font-size: 5rem;
+  }
+}
+@media (max-width: 400px) {
+  .font-1-a {
+    font-size: 3.5rem;
   }
 }
 :root {

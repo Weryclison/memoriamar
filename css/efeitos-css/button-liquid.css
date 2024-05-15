@@ -1,6 +1,7 @@
 a.botao {
   position: relative;
   overflow: hidden;
+  display: block;
 }
 
 a.botao span {
@@ -28,26 +29,26 @@ a .liquid::before {
   top: 0;
   left: 50%;
   transform: translate(-50%, -75%);
-  background: transparent;
+  background: #000;
 }
 
 a .liquid::before {
   border-radius: 45%;
   background: rgba(20, 20, 20, 1);
-  animation: animate 10s linear infinite;
+  animation: animateB 10s linear infinite;
 }
 
 a .liquid::after {
   border-radius: 40%;
   background: rgba(20, 20, 20, 0.5);
-  animation: animate 20s linear infinite;
+  animation: animateB 20s linear infinite;
 }
 
 a:hover .liquid {
   top: -120px;
 }
 
-@keyframes animate {
+@keyframes animateB {
   0% {
     transform: translate(-50%, -75%) rotate(0deg);
   }

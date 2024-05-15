@@ -1,0 +1,24 @@
+.containerVideo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.containerVideo .box {
+  position: relative;
+  filter: grayscale(1);
+  overflow: hidden;
+  border-right: 3px solid black;
+  box-sizing: border-box;
+}
+
+.containerVideo .box:hover {
+  filter: grayscale(0);
+}
+.containerVideo .box video {
+  width: 100%;
+  object-fit: cover;
+}
+@media (max-width: 750px) {
+  .containerVideo {
+    grid-template-columns: 1fr;
+  }
+}
