@@ -2,6 +2,9 @@ a.botao {
   position: relative;
   overflow: hidden;
   display: block;
+  height: fit-content;
+  width: fit-content;
+  justify-content: center;
 }
 
 a.botao span {
