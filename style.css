@@ -10,6 +10,7 @@
 @import url(./css/efeitos-css/image-comparator.css);
 @import url(./css/efeitos-css/video-hover.css);
 @import url(./css/efeitos-css/focus.css);
+@import url(./css/efeitos-css/dragabble-slide.css);
 
 /* index */
 @import url(./css/index/inicio.css);
@@ -23,3 +24,4 @@
 /* sobre */
 @import url(./css/sobre/inicio.css);
 @import url(./css/sobre/estudio.css);
+@import url(./css/sobre/marcas.css);

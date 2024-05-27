@@ -1,0 +1,119 @@
+.slider-drag {
+  position: relative;
+  margin-top: 80px;
+}
+
+.slider__container {
+  cursor: grab;
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.slider__container.dragging {
+  scroll-behavior: auto;
+  cursor: grabbing;
+}
+
+.slider__item {
+  flex: 0 0 auto;
+  transition: transform 1s ease;
+  max-width: 400px;
+  margin-right: 80px;
+}
+
+.slider__item img {
+  margin-bottom: 20px;
+}
+.slider__item p {
+  margin-bottom: 4px;
+}
+.slider__item p:nth-child(3) {
+  text-transform: uppercase;
+}
+.slider__container.dragging .slider__item {
+  transform: scale(0.8);
+}
+.slider__item.scale-down {
+  transform: scale(0.8);
+}
+
+.slider__container[data-step="4"] .slider__item {
+  width: calc(100% / 4);
+}
+
+.slider__container[data-step="3"] .slider__item {
+  width: calc(100% / 3);
+}
+
+.slider__container[data-step="2"] .slider__item {
+  width: calc(100% / 2);
+}
+
+.slider__container[data-step="1"] .slider__item {
+  width: calc(100% / 1);
+}
+
+@media screen and (max-width: 1024px) {
+  .slider__item,
+  .slider__container[data-step="4"] .slider__item {
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .slider__item,
+  .slider__container[data-step="4"] .slider__item,
+  .slider__container[data-step="3"] .slider__item {
+    width: calc(100% / 2);
+  }
+}
+@media screen and (max-width: 480px) {
+  .slider__item,
+  .slider__container[data-step="4"] .slider__item,
+  .slider__container[data-step="3"] .slider__item,
+  .slider__container[data-step="2"] .slider__item {
+    width: calc(100% / 2);
+  }
+  .slider__item {
+    margin-right: 60px;
+  }
+}
+
+.slider__control {
+  font-size: 16px;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  color: #000;
+  background: #fff;
+  cursor: pointer;
+  opacity: 0.5;
+  transition: all 0.3s;
+}
+
+.slider__control.prev {
+  left: 16px;
+}
+
+.slider__control.next {
+  right: 16px;
+}
+
+.slider__control:hover {
+  opacity: 1;
+  transform: translateY(-50%) scale(1.2);
+}
+
+.slider__item img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-select: none;
+}

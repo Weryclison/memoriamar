@@ -1,0 +1,35 @@
+.grid-marcas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 60px;
+}
+.grid-marcas img {
+  opacity: 0.2;
+  transition: 0.3s;
+}
+.grid-marcas img:hover {
+  opacity: 1;
+}
+@media (max-width: 900px) {
+  .grid-marcas {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 550px) {
+  .grid-marcas {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-marcas img:nth-of-type(12),
+  .grid-marcas img:nth-of-type(11),
+  .grid-marcas img:nth-of-type(10),
+  .grid-marcas img:nth-of-type(9),
+  .grid-marcas img:nth-of-type(8),
+  .grid-marcas img:nth-of-type(7) {
+    display: none;
+  }
+}
+@media (max-width: 300px) {
+  .grid-marcas {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
