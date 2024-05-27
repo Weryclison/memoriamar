@@ -20,3 +20,8 @@
 @import url(./css/servicos/fotografia.css);
 @import url(./css/servicos/filmagem.css);
 @import url(./css/servicos/footer-servico.css);
+
+/* sobre */
+
+@import url(/css/sobre/inicio.css);
+@import url(/css/sobre/estudio.css);

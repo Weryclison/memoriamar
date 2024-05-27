@@ -1,0 +1,67 @@
+.estudio {
+  text-align: center;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 1fr;
+}
+.estudio h3 {
+  margin-bottom: 16px;
+}
+.estudio > p {
+  max-width: 800px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+}
+
+div.slide-hover {
+  width: 100%;
+  max-width: 100%;
+  height: 600px;
+  display: flex;
+  border: 2px solid black;
+  margin: 0 auto;
+}
+
+div.slide-hover .slide-estudio {
+  position: relative;
+  background-color: #0f0;
+  max-height: 600px;
+  flex: 1;
+  border-right: 2px solid #000;
+  overflow: hidden;
+  transition: 0.5s ease-in-out;
+}
+div.slide-hover .slide-estudio:last-child {
+  border-right: none;
+}
+div.slide-hover .slide-estudio:hover {
+  flex-grow: 5;
+}
+div.slide-hover .slide-estudio:nth-child(1) {
+  background: url(../../img/foto-1-estudio.webp);
+  background-size: cover;
+}
+div.slide-hover .slide-estudio:nth-child(2) {
+  background: url(../../img/foto-2-estudio.webp);
+  background-size: cover;
+}
+div.slide-hover .slide-estudio:nth-child(3) {
+  background: url(../../img/foto-3-estudio.webp);
+  background-size: cover;
+}
+.quebra-sobre {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.quebra-sobre .botao {
+  margin: 28px auto 0 auto;
+}
+@media (max-width: 750px) {
+  div.slide-hover {
+    height: 350px;
+  }
+
+  div.slide-hover .slide-estudio {
+    max-height: 350px;
+  }
+}

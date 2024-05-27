@@ -1,0 +1,25 @@
+.inicio-sobre {
+  padding-top: 150px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+.inicio-sobre h3 {
+  margin-bottom: 28px;
+}
+.inicio-sobre p:first-of-type {
+  margin-bottom: 16px;
+}
+@media (max-width: 950px) {
+  .inicio-sobre {
+    grid-template-columns: 1fr;
+    padding-top: 100px;
+  }
+  .inicio-sobre-imagem {
+    margin: 0 auto;
+    margin-top: 40px;
+  }
+  .inicio-sobre h3 {
+    margin-bottom: 20px;
+  }
+}
