@@ -1,0 +1,81 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  overflow-y: visible;
+}
+
+.swiper-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0 auto;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 10%;
+  cursor: grab;
+}
+
+.s-1 {
+  background: url(../../img/operarção-maritima-port.webp) center;
+  background-size: cover;
+}
+.s-2 {
+  background: url(../../img/iniciativa-acessibilidade-port.webp) center;
+  background-size: cover;
+}
+.s-3 {
+  background: url(../../img/Vanguarda-fashin-port.webp);
+  background-size: cover;
+}
+
+.swiper-slide:active {
+  cursor: grabbing;
+}
+
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 15px);
+  background-color: #fff;
+}
+
+.swiper-pagination {
+  margin-bottom: 70px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  top: initial;
+  margin-top: initial;
+  bottom: 30px;
+  color: #fff;
+  padding: 30px;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .swiper-pagination {
+    display: none;
+  }
+}
+@media (max-width: 400px) {
+  .swiper-wrapper h1 {
+    display: none;
+  }
+}

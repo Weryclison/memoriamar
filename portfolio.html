@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memoriamar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <!-- meu deus -->
+  <link rel="stylesheet" href="https://use.typekit.net/ujk6ksk.css" />
+  <!-- meu deus -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+  <header id="header">
+    <div class="container flex-menu">
+      <a id="logo" href="index.html"><img src="./svg/logo.svg" alt="logo-memoriamar"></a>
+      <nav id="nav">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+          <span id="hamburguer"></span>
+        </button>
+        <ul id="menu">
+          <li class="font-1-d cinza-1"><a href="index.html" data-text="Home">home</a></li>
+          <li class="font-1-d cinza-1"><a href="serviços.html" data-text="serviços">serviços</a></li>
+          <li class="font-1-d cinza-1"><a href="sobre.html" data-text="sobre">sobre</a></li>
+          <li class="font-1-d cinza-1"><a href="portfolio.html" data-text="portfólio">portfólio</a></li>
+          <li class="font-1-d cinza-1"><a href="#" data-text="contato">contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- Swiper -->
+  <div class="swiper-container" id="swiper-container">
+    <div class="swiper-wrapper" id="itemsWrapper">
+      <div class="swiper-slide s-1 grid__item">
+        <h1 class="font-1-b branco">Operação Marítima</h1>
+      </div>
+      <div class="swiper-slide s-2">
+        <h1 class="font-1-b branco">Iniciativa Acessibilidade</h1>
+      </div>
+      <div class="swiper-slide s-3">
+        <h1 class="font-1-b branco">Vanguarda Fashion</h1>
+      </div>
+      <div class="swiper-slide s-2">
+        <h1 class="font-1-b branco">Iniciativa Acessibilidade</h1>
+      </div>
+
+    </div>
+
+
+
+
+  </div>
+  <div class="swiper-button-next">
+    <p></p>
+  </div>
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-pagination"></div>
+  <!-- Initialize Swiper -->
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="js/swiper.js"></script>
+  <script src="script.js"></script>
+  <!-- nem eu entendi o que esta logo abaixo, mas eu fiz -->
+  <script src="js/imagesloaded.pkgd.min.js"></script>
+  <script src="js/three.min.js"></script>
+  <script src="js/TweenLite.min.js"></script>
+  <script src="js/CSSPlugin.min.js"></script>
+  <script src="js/EasePack.min.js"></script>
+  <script src="js/GridToFullscreenEffect.js"></script>
+  <script src="js/basicDemo.js"></script>
+  <script src="js/fullscreen.js"></script>
+</body>
+
+</html>

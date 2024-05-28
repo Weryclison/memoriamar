@@ -22,9 +22,7 @@
   .grid-marcas img:nth-of-type(12),
   .grid-marcas img:nth-of-type(11),
   .grid-marcas img:nth-of-type(10),
-  .grid-marcas img:nth-of-type(9),
-  .grid-marcas img:nth-of-type(8),
-  .grid-marcas img:nth-of-type(7) {
+  .grid-marcas img:nth-of-type(9) {
     display: none;
   }
 }
