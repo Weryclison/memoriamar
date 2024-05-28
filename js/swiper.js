@@ -39,3 +39,38 @@ document
       swiper.slideNext();
     }
   });
+
+// Seleciona todas as tags <a> dentro dos slides
+var links = document.querySelectorAll(".swiper-slide a");
+
+// Adiciona um evento de clique a cada link
+links.forEach(function (link) {
+  link.addEventListener("click", function (event) {
+    event.preventDefault(); // Previne o comportamento padrão do link
+
+    // Salva a URL a partir do data-url do link clicado
+    var newUrl = link.dataset.url;
+
+    // Atualiza o slidesPerView para 1
+    swiper.params.slidesPerView = 1;
+    swiper.update(); // Atualiza o swiper com as novas configurações
+
+    // Altera a altura dos slides
+    var slides = document.querySelectorAll(".swiper-slide");
+    slides.forEach(function (slide) {
+      slide.style.height = "100vh";
+    });
+
+    // Adiciona um pequeno atraso para a transição suave do Swiper
+    setTimeout(function () {
+      // Atualiza o slidesPerView para 1
+      swiper.params.slidesPerView = 1;
+      swiper.update(); // Atualiza o swiper com as novas configurações
+
+      // Altera a URL do site 1 segundo após a transição
+      setTimeout(function () {
+        window.location.href = newUrl;
+      }, 2000); // 1 segundo de atraso
+    }, 0);
+  });
+});

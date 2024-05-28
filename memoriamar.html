@@ -8,13 +8,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
   <link rel="stylesheet" href="style.css">
 
 </head>
 
-<body style="padding-right: 5px;">
+<style>
+  .inicio-memoriamar {
+    height: 100vh;
+    background: url(./img/operarção-maritima-port.webp) center;
+    background-size: cover;
+  }
+
+
+  /* Aplica estilo para navegadores baseados em WebKit */
+</style>
+
+<body>
   <header id="header">
     <div class="container flex-menu">
       <a id="logo" href="index.html"><img src="./svg/logo.svg" alt="logo-memoriamar"></a>
@@ -22,9 +31,9 @@
         <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
           <span id="hamburguer"></span>
         </button>
-        <ul id="menu" style="margin-left: 50px;">
+        <ul id="menu">
           <li class="font-1-d cinza-1"><a href="index.html" data-text="Home">home</a></li>
-          <li class="font-1-d cinza-1"><a href="servicos.html" data-text="serviços">serviços</a></li>
+          <li class="font-1-d cinza-1"><a href="serviços.html" data-text="serviços">serviços</a></li>
           <li class="font-1-d cinza-1"><a href="sobre.html" data-text="sobre">sobre</a></li>
           <li class="font-1-d cinza-1"><a href="portfolio.html" data-text="portfólio">portfólio</a></li>
           <li class="font-1-d cinza-1"><a href="#" data-text="contato">contato</a></li>
@@ -32,38 +41,37 @@
       </nav>
     </div>
   </header>
-  <!-- Swiper -->
-  <div class="swiper-container" id="swiper-container">
-    <div class="swiper-wrapper">
-      <div class="swiper-slide s-1">
-        <a class="font-1-b branco" data-url="http://127.0.0.1:5500/memoriamar.html">Operação Marítima</a>
-      </div>
-      <div class="swiper-slide s-2">
-        <a class="font-1-b branco">Iniciativa Acessibilidade</a>
-      </div>
-      <div class="swiper-slide s-3">
-        <a class="font-1-b branco">Vanguarda Fashion</a>
-      </div>
-      <div class="swiper-slide s-2">
-        <a class="font-1-b branco">Iniciativa Acessibilidade</a>
-      </div>
+  <section class="inicio-memoriamar">
+  </section>
+
+
+  <footer class="container" id="content">
+    <div class="linha"></div>
+    <div class="content" id="contactContent">
+      <a href="contato.html">
+        <h2 class="font-1-a">contato</h2>
+        <h2 class="font-1-a">contato</h2>
+      </a>
 
     </div>
+    <div class="rodape">
+      <div class="subir">
+        <img src="./svg/setinha-indicando-pra-cima.svg" alt="">
+        <p class="font-1-e cinza">subir</p>
+      </div>
+
+      <div class="redes">
+        <a href="#" class="font-1-e cinza">Fb</a>
+        <a href="#" class="font-1-e cinza">Tw</a>
+        <a href="#" class="font-1-e cinza">In</a>
+        <a href="#" class="font-1-e cinza">Yt</a>
+      </div>
+      <p class="font-1-e cinza">® 2024 memoriamar • por codenand </p>
+    </div>
+  </footer>
 
 
-
-
-  </div>
-  <div class="swiper-button-next">
-    <p></p>
-  </div>
-  <div class="swiper-button-prev"></div>
-  <div class="swiper-pagination"></div>
-  <!-- Initialize Swiper -->
-  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-  <script src="js/swiper.js"></script>
   <script src="script.js"></script>
-
 </body>
 
 </html>

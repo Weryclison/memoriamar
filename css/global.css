@@ -16,6 +16,10 @@ dd {
   margin: 0px;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 ul {
   padding: 0px;
   list-style: none;
@@ -29,4 +33,15 @@ a {
 img {
   max-width: 100%;
   display: block;
+}
+
+/* Estilizando a barra de rolagem personalizada */
+::-webkit-scrollbar {
+  width: 5px; /* Largura da barra de rolagem */
+  background-color: transparent; /* Cor de fundo da barra de rolagem */
+}
+/* Estilizando o polegar da barra de rolagem */
+::-webkit-scrollbar-thumb {
+  background-color: white; /* Cor do polegar */
+  border-radius: 10px; /* Arredondamento do polegar */
 }

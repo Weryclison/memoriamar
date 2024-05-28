@@ -14,6 +14,7 @@ body {
   position: relative;
   overflow-x: hidden;
   overflow-y: visible;
+  transition: height 2s ease; /* Transição suave para o container */
 }
 
 .swiper-slide {
@@ -23,10 +24,13 @@ body {
   justify-content: center;
   align-items: center;
   height: 60vh;
-  width: 10%;
+  width: 50%;
   cursor: grab;
+  transition: height 2s ease, width 2s ease; /* Transição suave para a altura */
 }
-
+.swiper-slide a {
+  cursor: pointer;
+}
 .s-1 {
   background: url(../../img/operarção-maritima-port.webp) center;
   background-size: cover;
