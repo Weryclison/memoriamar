@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memoriamar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<style>
+  .inicio-memoriamar {
+    height: 100vh;
+    background: url(./img/operarção-maritima-port.webp) center;
+    background-size: cover;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+  }
+</style>
+
+<body>
+  <header id="header">
+    <div class="container flex-menu">
+      <a id="logo" href="index.html"><img src="./svg/logo.svg" alt="logo-memoriamar"></a>
+      <nav id="nav">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+          <span id="hamburguer"></span>
+        </button>
+        <ul id="menu">
+          <li class="font-1-d cinza-1"><a href="index.html" data-text="Home">home</a></li>
+          <li class="font-1-d cinza-1"><a href="serviços.html" data-text="serviços">serviços</a></li>
+          <li class="font-1-d cinza-1"><a href="sobre.html" data-text="sobre">sobre</a></li>
+          <li class="font-1-d cinza-1"><a href="portfolio.html" data-text="portfólio">portfólio</a></li>
+          <li class="font-1-d cinza-1"><a href="#" data-text="contato">contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="inicio-memoriamar">
+  </section>
+  <section class="projeto-sobre container">
+    <div class="linha"></div>
+    <h2 class="font-1-b branco">SOBRE O PROJETO</h2>
+    <p class="font-1-c cinza">A Operação Marítima é o resultado de um projeto que se concretizou graças à iniciativa da Oceanic Solutions, uma empresa sediada nos Estados Unidos, especializada na oferta de plástico reciclado de alta qualidade para diversos setores industriais, incluindo automotivo, eletrônico e tecnológico. A Oceanic Solutions desempenha um papel crucial na coleta e no reaproveitamento de plásticos, proporcionando-lhes uma nova e sustentável utilidade nas cadeias de produção.</p>
+    <img src="./img/operação-maritima-foto-1.webp" alt="" class="redimensione-imagem">
+  </section>
+  <section class="projeto-mudanca container">
+    <h2 class="font-1-b branco">MUDANÇA</h2>
+    <p class="font-1-c cinza">Anteriormente referido como Iniciativa Caribe, a Operação Marítima é encarregada de proporcionar sustento a inúmeras famílias caribenhas, elevando seu padrão de vida e humanizando o processo de reciclagem - não apenas removendo plástico dos oceanos, mas também restaurando a dignidade na vida de muitos indivíduos.</p>
+    <img src="./img/operação-maritima-foto-2.webp" alt="" class="redimensione-imagem">
+  </section>
+  <section class="projeto-imagens container">
+    <img src="./img/operação-maritima-foto-3.webp" alt="Foto operação-marítima" class="redimensione-imagem">
+    <img src="./img/operação-maritima-foto-4.webp" alt="Foto operação-marítima" class="redimensione-imagem">
+    <img src="./img/operarção-maritima-port.webp" alt="Foto operação-marítima" class="redimensione-imagem">
+    <img src="./img/operação-maritima-foto-5.webp" alt="Foto operação-marítima" class="redimensione-imagem">
+    <img src="./img/operação-maritima-foto-1.webp" alt="Foto operação-marítima" class="redimensione-imagem">
+  </section>
+  <section class="container">
+    <h2 class="font-1-b branco coach-projeto">“Não existem problemas, apenas oportunidades.”</h2>
+  </section>
+
+
+
+  <footer class="container" id="content">
+    <div class="linha"></div>
+    <div class="rodape">
+      <div class="subir">
+        <img src="./svg/setinha-indicando-pra-cima.svg" alt="">
+        <p class="font-1-e cinza">subir</p>
+      </div>
+
+      <div class="redes">
+        <a href="#" class="font-1-e cinza">Fb</a>
+        <a href="#" class="font-1-e cinza">Tw</a>
+        <a href="#" class="font-1-e cinza">In</a>
+        <a href="#" class="font-1-e cinza">Yt</a>
+      </div>
+      <p class="font-1-e cinza">® 2024 memoriamar • por codenand </p>
+    </div>
+  </footer>
+
+
+  <script src="script.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      setTimeout(function () {
+        scrollSuave(200, 100);
+      }, 600);
+
+      function scrollSuave(offset, duration) {
+        const initialY = window.scrollY;
+        const baseY = (initialY + offset) * 0.5;
+        const startTime = performance.now();
+        function step() {
+          const normalizedTime = (performance.now() - startTime) / duration;
+          if (normalizedTime > 1) return window.scrollTo(0, initialY + offset);
+          window.scrollTo(0, initialY + offset * Math.sin(normalizedTime * Math.PI));
+          window.requestAnimationFrame(step);
+        }
+        window.requestAnimationFrame(step);
+      }
+    });
+
+  </script>
+
+  <script>
+    // JavaScript
+    document.addEventListener('DOMContentLoaded', () => {
+      const images = document.querySelectorAll('.redimensione-imagem');
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && entry.intersectionRect.height >= 0) {
+            entry.target.classList.add('expandir');
+          }
+        });
+      }, {
+        threshold: [0, 0.1, 0.5, 1]
+      });
+
+      images.forEach(image => {
+        observer.observe(image);
+      });
+    });
+
+  </script>
+
+</body>
+
+</html>

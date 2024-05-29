@@ -252,13 +252,3 @@ function focus() {
 focus();
 
 // ########
-
-// Mostrar a barra de rolagem personalizada quando necessário
-document.getElementById("content").addEventListener("mouseenter", function () {
-  document.getElementById("custom-scrollbar").style.display = "block";
-});
-
-// Ocultar a barra de rolagem personalizada quando o mouse sai do conteúdo
-document.getElementById("content").addEventListener("mouseleave", function () {
-  document.getElementById("custom-scrollbar").style.display = "none";
-});

@@ -14,7 +14,13 @@
 
 </head>
 
-<body style="padding-right: 5px;">
+<style>
+  ::-webkit-scrollbar-thumb {
+    background-color: black;
+  }
+</style>
+
+<body style="height: 100.1vh;">
   <header id="header">
     <div class="container flex-menu">
       <a id="logo" href="index.html"><img src="./svg/logo.svg" alt="logo-memoriamar"></a>
@@ -22,7 +28,7 @@
         <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
           <span id="hamburguer"></span>
         </button>
-        <ul id="menu" style="margin-left: 50px;">
+        <ul id="menu">
           <li class="font-1-d cinza-1"><a href="index.html" data-text="Home">home</a></li>
           <li class="font-1-d cinza-1"><a href="servicos.html" data-text="serviços">serviços</a></li>
           <li class="font-1-d cinza-1"><a href="sobre.html" data-text="sobre">sobre</a></li>
@@ -36,7 +42,7 @@
   <div class="swiper-container" id="swiper-container">
     <div class="swiper-wrapper">
       <div class="swiper-slide s-1">
-        <a class="font-1-b branco" data-url="http://127.0.0.1:5500/memoriamar.html">Operação Marítima</a>
+        <a class="font-1-b branco" data-url="operacao-maritima.html">Operação Marítima</a>
       </div>
       <div class="swiper-slide s-2">
         <a class="font-1-b branco">Iniciativa Acessibilidade</a>
