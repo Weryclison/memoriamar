@@ -22,7 +22,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 60vh;
-  width: 50%;
   cursor: grab;
   transition: height 2s ease, width 2s ease; /* Transição suave para a altura */
 }

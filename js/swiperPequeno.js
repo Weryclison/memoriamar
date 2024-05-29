@@ -1,17 +1,12 @@
-var swiper = new Swiper(".swiper-container", {
-  slidesPerView: 1.1,
+var swiperP = new Swiper(".swiper-containe", {
+  slidesPerView: 1,
   spaceBetween: 50,
-  loop: true,
   speed: 1000,
   centeredSlides: true,
   resistanceRatio: 0.5,
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
     // Quando a largura da tela for igual ou superior a 768px
@@ -27,24 +22,7 @@ var swiper = new Swiper(".swiper-container", {
   },
 });
 
-// Adiciona evento de rolagem ao contêiner do Swiper
-document
-  .getElementById("swiper-container")
-  .addEventListener("wheel", function (event) {
-    event.preventDefault();
-
-    if (event.deltaY < 0) {
-      swiper.slidePrev();
-    } else {
-      swiper.slideNext();
-    }
-  });
-// Seleciona todas as tags <a> dentro dos slides
-var links = document.querySelectorAll(".swiper-slide a");
-console.log(links);
-
-// Adiciona um evento de clique a cada link
-links.forEach(function (link) {
+function handleClick(link) {
   link.addEventListener("click", function (event) {
     event.preventDefault(); // Previne o comportamento padrão do link
 
@@ -52,8 +30,8 @@ links.forEach(function (link) {
     var newUrl = link.dataset.url;
 
     // Atualiza o slidesPerView para 1
-    swiper.params.slidesPerView = 1;
-    swiper.update(); // Atualiza o swiper com as novas configurações
+    swiperP.params.slidesPerView = 1;
+    swiperP.update(); // Atualiza o swiper com as novas configurações
 
     // Altera a altura dos slides
     var slides = document.querySelectorAll(".swiper-slide");
@@ -64,8 +42,8 @@ links.forEach(function (link) {
     // Adiciona um pequeno atraso para a transição suave do Swiper
     setTimeout(function () {
       // Atualiza o slidesPerView para 1
-      swiper.params.slidesPerView = 1;
-      swiper.update(); // Atualiza o swiper com as novas configurações
+      swiperP.params.slidesPerView = 1;
+      swiperP.update(); // Atualiza o swiper com as novas configurações
 
       // Altera a URL do site 1 segundo após a transição
       setTimeout(function () {
@@ -73,4 +51,8 @@ links.forEach(function (link) {
       }, 2000); // 1 segundo de atraso
     }, 0);
   });
-});
+}
+
+// Chama a função com o link desejado
+var link = document.querySelector(".swiper-slide a");
+handleClick(link);

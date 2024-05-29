@@ -50,6 +50,20 @@
   max-width: 540px;
   margin-top: 80px;
 }
+footer {
+  z-index: 999999999999999;
+}
+footer .swiper-container {
+  position: initial;
+  top: initial;
+  left: initial;
+  transform: initial;
+  margin: initial;
+  z-index: 99999999;
+}
+footer .swiper-slide {
+  z-index: 99999999;
+}
 
 @media (max-width: 950px) {
   .projeto-sobre h2 {
