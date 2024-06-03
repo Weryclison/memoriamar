@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   function scrollSuave(offset, duration) {
     const initialY = window.scrollY;
-    const baseY = (initialY + offset) * 0.5;
     const startTime = performance.now();
     function step() {
       const normalizedTime = (performance.now() - startTime) / duration;

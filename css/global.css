@@ -45,3 +45,14 @@ img {
   background-color: white; /* Cor do polegar */
   border-radius: 10px; /* Arredondamento do polegar */
 }
+@media (max-width: 750px) {
+  ::-webkit-scrollbar {
+    width: 0px; /* Largura da barra de rolagem */
+    background-color: transparent; /* Cor de fundo da barra de rolagem */
+  }
+  /* Estilizando o polegar da barra de rolagem */
+  ::-webkit-scrollbar-thumb {
+    background-color: black; /* Cor do polegar */
+    border-radius: 10px; /* Arredondamento do polegar */
+  }
+}

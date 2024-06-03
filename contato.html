@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memoriamar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="contato-geral">
+  <header id="header">
+    <div class="container flex-menu">
+      <a id="logo" href="index.html"><img src="./svg/logo.svg" alt="logo-memoriamar"></a>
+      <nav id="nav">
+        <button aria-label="Abrir Menu" id="btn-mobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+          <span id="hamburguer"></span>
+        </button>
+        <ul id="menu">
+          <li class="font-1-d cinza-1"><a href="index.html" data-text="Home">home</a></li>
+          <li class="font-1-d cinza-1"><a href="servicos.html" data-text="serviços">serviços</a></li>
+          <li class="font-1-d cinza-1"><a href="sobre.html" data-text="sobre">sobre</a></li>
+          <li class="font-1-d cinza-1"><a href="portfolio.html" data-text="portfólio">portfólio</a></li>
+          <li class="font-1-d cinza-1"><a href="contato.html" data-text="contato">contato</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <section class="inicio-contato container">
+    <p class="texto-contato font-1-c cinza "> Vemos o mundo de maneira única e queremos compartilhar isso com você. Entre em contato e descubra como podemos tornar seus momentos ainda mais especiais.</p>
+  </section>
+  <section class="formulario container">
+    <div class="linha"></div>
+    <div class="contato-conteudo">
+      <div>
+        <p class="font-1-d cinza-1">dúvidas</p>
+        <h2 class="font-1-b branco">FALE CONOSCO</h2>
+      </div>
+      <ul>
+        <li class="font-1-c cinza">
+          <img src="./svg/icon-local.svg" alt="">
+          Rua Augusta, São Paulo
+        </li>
+        <li class="font-1-c cinza">
+          <img src="./svg/icon-whats.svg" alt="">
+          (35) 9998 - 8999
+        </li>
+        <li class="font-1-c cinza">
+          <img src="./svg/icon-email.svg" alt="">
+          contato@memoriamar.com
+        </li>
+      </ul>
+
+    </div>
+    <div class="contato-formulario">
+      <form action="#" method="post">
+        <div>
+          <input type="text" id="nome" name="nome" placeholder="Nome">
+        </div>
+        <div>
+          <input type="text" id="email" name="email" placeholder="Email">
+        </div>
+        <div>
+          <input type="text" id="Empresa" name="Empresa" placeholder="Empresa">
+        </div>
+        <div class="text-area">
+          <textarea name="mensagem" id="mensagem" placeholder="Mensagem"></textarea>
+        </div>
+        <a href="#" class="botao">enviar</a>
+      </form>
+    </div>
+  </section>
+
+
+
+
+  <footer class="container footer-contato" id="content">
+    <div class="rodape">
+      <div class="subir">
+        <img src="./svg/setinha-indicando-pra-cima.svg" alt="">
+        <p class="font-1-e cinza">subir</p>
+      </div>
+
+      <div class="redes">
+        <a href="#" class="font-1-e cinza">Fb</a>
+        <a href="#" class="font-1-e cinza">Tw</a>
+        <a href="#" class="font-1-e cinza">In</a>
+        <a href="#" class="font-1-e cinza">Yt</a>
+      </div>
+      <p class="font-1-e cinza">® 2024 memoriamar • por codenand </p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

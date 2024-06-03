@@ -1,0 +1,94 @@
+.inicio-contato {
+  padding-top: 160px;
+  display: grid;
+  justify-content: center;
+}
+.contato-conteudo {
+  padding-right: 40px;
+}
+.texto-contato {
+  text-align: center;
+  max-width: 740px;
+}
+.formulario {
+  display: grid;
+  grid-template-columns: 5fr 8fr;
+  align-items: center;
+}
+.formulario ul {
+  margin-top: 60px;
+}
+.formulario li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 25px;
+}
+form input {
+  border: 1px solid var(--cinza-1);
+  background-color: transparent;
+  padding: 12px 0px 12px 20px;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.6;
+  width: 100%;
+}
+form .text-area {
+  grid-column: 1/-1;
+}
+form .text-area #mensagem {
+  width: 100%;
+  background-color: transparent;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 12px 0px 12px 20px;
+  border: 1px solid var(--cinza-1);
+  height: 200px;
+}
+form .botao {
+  color: var(--cinza-1);
+  border-color: var(--cinza-1);
+}
+.footer-contato .rodape {
+  padding-top: 90px;
+}
+@media (max-width: 1000px) {
+  .formulario {
+    grid-template-columns: 6fr 6fr;
+  }
+}
+@media (max-width: 850px) {
+  .inicio-contato {
+    padding-top: 120px;
+  }
+  .formulario {
+    grid-template-columns: 1fr;
+  }
+  .formulario ul {
+    margin-top: 40px;
+  }
+  form {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+  .contato-conteudo {
+    padding-right: 0px;
+    padding-bottom: 40px;
+  }
+  form .text-area #mensagem {
+    height: 100px;
+  }
+  .formulario li {
+    font-size: 14px;
+    overflow-x: hidden;
+  }
+}

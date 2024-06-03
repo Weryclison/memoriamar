@@ -50,9 +50,42 @@
   max-width: 540px;
   margin-top: 80px;
 }
-footer {
-  z-index: 999999999999999;
+.projeto-proximo {
+  display: flex;
+  justify-content: center;
 }
+.redimensione {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  width: 80%;
+}
+.redimensione a {
+  cursor: pointer;
+}
+/*  */
+/*  */
+/*  */
+
+.redimensione {
+  transition: all 2s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.redimensione.fullscreen {
+  position: fixed;
+  transition: none;
+  z-index: 1000; /* Garantindo que fique por cima de tudo */
+  background: white; /* Você pode ajustar a cor de fundo conforme necessário */
+}
+
+.redimensione.fullscreen-transition {
+  transition: all 2s ease;
+}
+
 footer .swiper-container {
   position: initial;
   top: initial;

@@ -12,6 +12,7 @@
 @import url(./css/efeitos-css/focus.css);
 @import url(./css/efeitos-css/dragabble-slide.css);
 @import url(./css/efeitos-css/swiper.css);
+@import url(./css/efeitos-css/base.css);
 
 /* index */
 @import url(./css/index/inicio.css);
@@ -27,4 +28,8 @@
 @import url(./css/sobre/estudio.css);
 @import url(./css/sobre/marcas.css);
 
+/* portfolio */
 @import url(./css/portfolio/projeto.css);
+
+/* contato */
+@import url(./css/contato/contato.css);
