@@ -1,3 +1,16 @@
+// ######## EFEITO SUBIR #############
+
+const subirButtons = document.querySelectorAll(".subir");
+
+subirButtons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+
 // ######  DRAGABBLE SLIDE  ########
 function dragabbleSlide() {
   const sliders = [...document.querySelectorAll(".slider__container")];
@@ -250,5 +263,3 @@ function focus() {
 }
 
 focus();
-
-// ########

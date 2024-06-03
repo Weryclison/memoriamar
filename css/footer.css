@@ -8,6 +8,7 @@ footer .linha {
   display: flex;
   gap: 32px;
   float: left;
+  cursor: pointer;
 }
 .rodape .redes {
   float: right;
@@ -29,8 +30,5 @@ footer .linha {
   .rodape {
     padding-top: 100px;
     text-align: center;
-  }
-  .rodape {
-    padding-top: 60px;
   }
 }

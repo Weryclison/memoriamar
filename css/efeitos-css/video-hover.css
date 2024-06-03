@@ -6,7 +6,7 @@
   position: relative;
   filter: grayscale(1);
   overflow: hidden;
-  border-right: 3px solid black;
+  border-right: 4px solid black;
   box-sizing: border-box;
 }
 
