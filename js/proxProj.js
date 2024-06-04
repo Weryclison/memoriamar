@@ -2,30 +2,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   const link = document.querySelector(".redimensione a");
   const div = document.querySelector(".redimensione");
 
-  // Função para armazenar as dimensões e a posição originais da div
-  function storeOriginalDimensionsAndPosition() {
-    const rect = div.getBoundingClientRect();
-    localStorage.setItem("originalWidth", rect.width);
-    localStorage.setItem("originalHeight", rect.height);
-    localStorage.setItem("originalTop", rect.top);
-    localStorage.setItem("originalLeft", rect.left);
-  }
-
-  // Função para restaurar as dimensões e a posição originais da div
-  function restoreOriginalDimensionsAndPosition() {
-    const originalWidth = localStorage.getItem("originalWidth");
-    const originalHeight = localStorage.getItem("originalHeight");
-    const originalTop = localStorage.getItem("originalTop");
-    const originalLeft = localStorage.getItem("originalLeft");
-
-    div.style.position = "static"; // Restaurar a posição original
-    div.style.width = `${originalWidth}px`;
-    div.style.height = `${originalHeight}px`;
-    div.style.top = `${originalTop}px`;
-    div.style.left = `${originalLeft}px`;
-    div.style.zIndex = ""; // Limpar zIndex
-  }
-
   link.addEventListener("click", (e) => {
     e.preventDefault(); // Evita que o link navegue para outra página
 
@@ -57,13 +33,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Após 1 segundo, redireciona para a URL especificada em data-url
     setTimeout(() => {
       window.location.href = link.getAttribute("data-url");
-      storeOriginalDimensionsAndPosition(); // Armazena as dimensões e a posição originais após a transição
     }, 2000); // 1 segundo após o início da transição
   });
 
-  // Verifica se houve uma mudança na URL (transição de página)
-  window.addEventListener("popstate", () => {
-    // Restaura as dimensões e a posição originais da div
-    restoreOriginalDimensionsAndPosition();
-  });
+  // Limpa os estilos e outros dados ao descarregar a página
+  window.onunload = function () {
+    // Redefina os estilos aplicados à div
+    div.style.position = "";
+    div.style.top = "";
+    div.style.left = "";
+    div.style.width = "";
+    div.style.height = "";
+    div.style.zIndex = "";
+    div.classList.remove("fullscreen-transition");
+
+    // Outros dados que você deseja redefinir podem ser limpos aqui
+  };
 });
