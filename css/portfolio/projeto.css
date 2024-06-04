@@ -152,10 +152,22 @@
 .image-bg {
   background-image: url(../../img/maritima-fundo.webp);
   background-position: center;
-  object-fit: cover;
+  background-size: cover;
   height: 500px;
   background-attachment: fixed;
   margin-bottom: 80px;
+}
+.b-2 {
+  background-image: url(../../img/iniciativa-acessibilidade-foto-1.webp);
+  background-position: right;
+}
+.b-3 {
+  background-image: url(../../img/fashion-fundo.webp);
+  background-position: top;
+}
+.b-4 {
+  background-image: url(../../img/meditacao-fundo.jpg);
+  background-position: top;
 }
 
 footer .swiper-container {
