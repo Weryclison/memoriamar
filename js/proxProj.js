@@ -30,55 +30,22 @@ document.addEventListener("DOMContentLoaded", (event) => {
     div.style.width = "100%";
     div.style.height = "100%";
 
-    // Salva o estado modificado no sessionStorage
-    sessionStorage.setItem(
-      "divState",
-      JSON.stringify({
-        position: div.style.position,
-        top: div.style.top,
-        left: div.style.left,
-        width: div.style.width,
-        height: div.style.height,
-        zIndex: div.style.zIndex,
-        classList: Array.from(div.classList),
-      })
-    );
-
-    // Após 1 segundo, redireciona para a URL especificada em data-url
+    // Após 2 segundos, redireciona para a URL especificada em data-url
     setTimeout(() => {
-      window.location.href = link.getAttribute("data-url");
-    }, 2000); // 1 segundo após o início da transição
-  });
+      const url = link.getAttribute("data-url");
 
-  // Limpa o estado salvo no sessionStorage ao descarregar a página
-  window.addEventListener("unload", function () {
-    sessionStorage.removeItem("divState");
-  });
+      // Redefine os estilos após a troca da URL
+      setTimeout(() => {
+        div.style.position = "";
+        div.style.top = "";
+        div.style.left = "";
+        div.style.width = "";
+        div.style.height = "";
+        div.style.zIndex = "";
+        div.classList.remove("fullscreen-transition");
+      }, 100); // Ajuste o tempo conforme necessário
 
-  // Restaura o estado inicial da div ao carregar a página
-  window.addEventListener("load", function () {
-    const savedState = sessionStorage.getItem("divState");
-    if (savedState) {
-      const state = JSON.parse(savedState);
-      div.style.position = state.position;
-      div.style.top = state.top;
-      div.style.left = state.left;
-      div.style.width = state.width;
-      div.style.height = state.height;
-      div.style.zIndex = state.zIndex;
-      div.className = ""; // Limpa todas as classes
-      state.classList.forEach((cls) => div.classList.add(cls)); // Adiciona as classes salvas
-    } else {
-      // Redefina os estilos aplicados à div
-      div.style.position = "";
-      div.style.top = "";
-      div.style.left = "";
-      div.style.width = "";
-      div.style.height = "";
-      div.style.zIndex = "";
-
-      // Remove a classe adicionada
-      div.classList.remove("fullscreen-transition");
-    }
+      window.location.href = url;
+    }, 2000); // 2 segundos após o início da transição
   });
 });
