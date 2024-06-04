@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   });
 
   // Limpa os estilos e outros dados ao descarregar a página
-  window.onunload = function () {
+  window.onbeforeunload = function () {
     // Redefina os estilos aplicados à div
     div.style.position = "";
     div.style.top = "";
@@ -46,6 +46,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     div.style.height = "";
     div.style.zIndex = "";
     div.classList.remove("fullscreen-transition");
+    div.style.position = "relative";
 
     // Outros dados que você deseja redefinir podem ser limpos aqui
   };
