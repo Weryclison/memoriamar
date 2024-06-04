@@ -33,6 +33,17 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Após 1 segundo, redireciona para a URL especificada em data-url
     setTimeout(() => {
       window.location.href = link.getAttribute("data-url");
-    }, 2000); // 1 segundo após o início da transição
+
+      // Após 2 segundos, retorna ao tamanho original
+      setTimeout(() => {
+        div.style.top = `${originalTop}px`;
+        div.style.left = `${originalLeft}px`;
+        div.style.width = `${originalWidth}px`;
+        div.style.height = `${originalHeight}px`;
+
+        // Remove a classe de transição se necessário
+        div.classList.remove("fullscreen-transition");
+      }, 2000); // 2 segundos após o redirecionamento
+    }, 2000); // 2 segundos após o início da transição
   });
 });
