@@ -40,6 +40,10 @@ body {
   background: url(../../img/Vanguarda-fashin-port.webp);
   background-size: cover;
 }
+.s-4 {
+  background: url(../../img/meditacao-port.webp);
+  background-size: cover;
+}
 
 .swiper-slide:active {
   cursor: grabbing;
@@ -60,9 +64,10 @@ body {
 .swiper-button-prev {
   top: initial;
   margin-top: initial;
-  bottom: 30px;
+  bottom: 20px;
   color: #fff;
   padding: 30px;
+  z-index: 9999999;
 }
 
 .swiper-button-next:after,
