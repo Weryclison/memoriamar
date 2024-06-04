@@ -92,3 +92,7 @@ form .botao {
     overflow-x: hidden;
   }
 }
+form .botao:hover {
+  color: var(--branco);
+  border-color: var(--branco);
+}

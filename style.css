@@ -33,3 +33,7 @@
 
 /* contato */
 @import url(./css/contato/contato.css);
+
+.no-padding {
+  padding-top: 50px;
+}

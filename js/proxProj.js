@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     div.style.left = `${originalLeft}px`;
     div.style.width = `${originalWidth}px`;
     div.style.height = `${originalHeight}px`;
-    div.style.zIndex = "1000";
+    div.style.zIndex = "1";
 
     // Força reflow para garantir que as mudanças de estilo sejam aplicadas antes da transição
     div.offsetHeight;

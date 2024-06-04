@@ -22,9 +22,9 @@
   box-sizing: border-box;
 }
 .linha {
-  height: 2px;
+  height: 1px;
   width: 100%;
-  background-color: var(--cinza-2);
+  background-color: var(--cinza-3);
   margin-top: 80px;
   margin-bottom: 80px;
   grid-column: 1/-1;
