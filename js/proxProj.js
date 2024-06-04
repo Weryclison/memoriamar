@@ -29,8 +29,6 @@ document.addEventListener("DOMContentLoaded", (event) => {
   link.addEventListener("click", (e) => {
     e.preventDefault(); // Evita que o link navegue para outra página
 
-    storeOriginalDimensionsAndPosition(); // Armazena as dimensões e a posição originais
-
     // Obtém as dimensões e a posição originais da div
     const rect = div.getBoundingClientRect();
     const originalWidth = rect.width;
@@ -59,7 +57,13 @@ document.addEventListener("DOMContentLoaded", (event) => {
     // Após 1 segundo, redireciona para a URL especificada em data-url
     setTimeout(() => {
       window.location.href = link.getAttribute("data-url");
-      restoreOriginalDimensionsAndPosition(); // Restaura as dimensões e a posição originais após a transição
+      storeOriginalDimensionsAndPosition(); // Armazena as dimensões e a posição originais após a transição
     }, 2000); // 1 segundo após o início da transição
+  });
+
+  // Verifica se houve uma mudança na URL (transição de página)
+  window.addEventListener("popstate", () => {
+    // Restaura as dimensões e a posição originais da div
+    restoreOriginalDimensionsAndPosition();
   });
 });
