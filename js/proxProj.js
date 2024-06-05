@@ -39,11 +39,20 @@ document.addEventListener("DOMContentLoaded", (event) => {
         div.style.position = "";
         div.style.top = "";
         div.style.left = "";
-        div.style.width = "50%";
         div.style.height = "60vh";
         div.style.zIndex = "";
         div.classList.remove("fullscreen-transition");
-      }, 200); // Ajuste o tempo conforme necessário
+
+        const windowWidth = window.innerWidth;
+
+        if (windowWidth <= 900) {
+          div.style.width = "80%";
+        } else if (windowWidth <= 1200) {
+          div.style.width = "70%";
+        } else {
+          div.style.width = "50%";
+        }
+      }, 500); // Ajuste o tempo conforme necessário
 
       window.location.href = url;
     }, 2000); // 2 segundos após o início da transição

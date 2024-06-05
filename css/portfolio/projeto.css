@@ -106,11 +106,6 @@
     width: 80%;
   }
 }
-@media (max-width: 550px) {
-  .redimensione {
-    width: 80%;
-  }
-}
 
 .next-title-marquee {
   position: absolute;
