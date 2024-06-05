@@ -79,6 +79,13 @@ body {
   .swiper-pagination {
     display: none;
   }
+  .swiper-slide {
+    margin-bottom: 60px;
+  }
+  .swiper-button-next,
+  .swiper-button-prev {
+    margin-bottom: 60px;
+  }
 }
 @media (max-width: 400px) {
   .swiper-wrapper h1 {
