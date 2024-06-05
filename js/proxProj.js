@@ -43,7 +43,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
         div.style.height = "";
         div.style.zIndex = "";
         div.classList.remove("fullscreen-transition");
-      }, 200); // Ajuste o tempo conforme necessário
+      }, 0); // Ajuste o tempo conforme necessário
 
       window.location.href = url;
     }, 2000); // 2 segundos após o início da transição

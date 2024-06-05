@@ -80,15 +80,29 @@ links.forEach(function (link) {
       }, 2000); // 2 segundos de atraso
     }, 0);
 
-    // Reinicia os estilos após a execução
+    // Reinicia os estilos e configurações após a execução
     setTimeout(function () {
       slides.forEach(function (slide, index) {
         slide.style.height = originalStyles[index].height;
       });
 
       // Reinicia as configurações do Swiper
-      swiper.params.slidesPerView = 1.8;
+      swiper.params.slidesPerView = 1.1;
+      swiper.params.spaceBetween = 50;
       swiper.update(); // Atualiza o swiper com as configurações originais
+
+      // Verifica a largura da janela e aplica os breakpoints apropriados
+      var windowWidth = window.innerWidth;
+
+      if (windowWidth >= 1020) {
+        swiper.params.slidesPerView = 1.8;
+        swiper.params.spaceBetween = 150;
+      } else if (windowWidth >= 768) {
+        swiper.params.slidesPerView = 1.5;
+        swiper.params.spaceBetween = 100;
+      }
+
+      swiper.update(); // Atualiza o swiper com as configurações de breakpoint
     }, 2500); // 2.5 segundos de atraso para garantir que a URL já foi alterada
   });
 });
