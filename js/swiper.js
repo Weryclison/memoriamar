@@ -40,7 +40,6 @@ document
 
 // Seleciona todas as tags <a> dentro dos slides
 var links = document.querySelectorAll(".swiper-slide a");
-console.log(links);
 
 // Adiciona um evento de clique a cada link
 links.forEach(function (link) {

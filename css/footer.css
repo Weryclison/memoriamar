@@ -4,6 +4,9 @@ footer {
 footer .linha {
   margin-bottom: 20px;
 }
+footer .botao {
+  margin-bottom: 40px;
+}
 .rodape {
   padding-top: 200px;
 }
