@@ -14,7 +14,6 @@ var swiper = new Swiper(".swiper-container", {
     prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    // Quando a largura da tela for igual ou superior a 768px
     768: {
       slidesPerView: 1.5,
       spaceBetween: 100,
@@ -23,7 +22,6 @@ var swiper = new Swiper(".swiper-container", {
       slidesPerView: 1.8,
       spaceBetween: 150,
     },
-    // Adicione mais breakpoints conforme necessário
   },
 });
 
@@ -39,6 +37,7 @@ document
       swiper.slideNext();
     }
   });
+
 // Seleciona todas as tags <a> dentro dos slides
 var links = document.querySelectorAll(".swiper-slide a");
 console.log(links);
@@ -51,12 +50,20 @@ links.forEach(function (link) {
     // Salva a URL a partir do data-url do link clicado
     var newUrl = link.dataset.url;
 
+    // Salva os estilos originais dos slides
+    var slides = document.querySelectorAll(".swiper-slide");
+    var originalStyles = [];
+    slides.forEach(function (slide) {
+      originalStyles.push({
+        height: slide.style.height,
+      });
+    });
+
     // Atualiza o slidesPerView para 1
     swiper.params.slidesPerView = 1;
     swiper.update(); // Atualiza o swiper com as novas configurações
 
     // Altera a altura dos slides
-    var slides = document.querySelectorAll(".swiper-slide");
     slides.forEach(function (slide) {
       slide.style.height = "100vh";
     });
@@ -70,7 +77,18 @@ links.forEach(function (link) {
       // Altera a URL do site 1 segundo após a transição
       setTimeout(function () {
         window.location.href = newUrl;
-      }, 2000); // 1 segundo de atraso
+      }, 2000); // 2 segundos de atraso
     }, 0);
+
+    // Reinicia os estilos após a execução
+    setTimeout(function () {
+      slides.forEach(function (slide, index) {
+        slide.style.height = originalStyles[index].height;
+      });
+
+      // Reinicia as configurações do Swiper
+      swiper.params.slidesPerView = 1.8;
+      swiper.update(); // Atualiza o swiper com as configurações originais
+    }, 2500); // 2.5 segundos de atraso para garantir que a URL já foi alterada
   });
 });
